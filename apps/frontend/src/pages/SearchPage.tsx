@@ -1,3 +1,11 @@
+import MainLayout from "@/components/layout/MainLayout"
+
 export default function SearchPage() {
-  return <div>Search Page</div>
+  return (
+    <MainLayout>
+      <div className="p-8">
+        Search Page
+      </div>
+    </MainLayout>
+  )
 }
