@@ -27,3 +27,5 @@ test-results/
 # IDE
 .vscode/
 .idea/
+
+scraper/*.json
