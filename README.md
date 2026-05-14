@@ -1,31 +1,90 @@
 # WN-Exhibition
 
-A web novel discovery and rating platform inspired by AlbumOfTheYear, MyAnimeList, and NovelUpdates.
-
-## Tech Stack
-
-- React + Vite
-- TailwindCSS
-- Supabase
-- Python Scrapy
-- PostgreSQL
+A full-stack web novel discovery platform inspired by sites like NovelUpdates and MAL.
 
 ## Features
 
-- Novel database
-- Ratings and reviews
-- Genre filtering
-- Recommendation system
-- Metadata scraping pipeline
-- Search and ranking system
+- Discover web novels
+- Scrape metadata from sources like Wuxiaworld
+- Store normalized data in Supabase
+- Browse novels in a modern React frontend
+- Relational database architecture
+- Genre and author linking
 
-## Structure
+## Tech Stack
 
-apps/frontend -> React frontend  
-scraper -> scraping pipeline  
-database -> schema and migrations  
-docs -> project documentation
+### Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS v4
+- shadcn/ui
 
-## License
+### Backend / Data
+- Scrapy
+- Supabase
+- PostgreSQL
 
-MIT
+## Project Structure
+
+webnovel-site/
+├── apps/
+│   └── frontend/
+├── scraper/
+├── database/
+├── docs/
+
+## Current Progress
+
+- [x] React frontend setup
+- [x] Tailwind + shadcn/ui
+- [x] Supabase integration
+- [x] Wuxiaworld scraper
+- [x] Automated ingestion pipeline
+- [x] Novel cards rendering from DB
+- [ ] Novel detail pages
+- [ ] Search system
+- [ ] Ratings & reviews
+- [ ] Authentication
+
+## Development
+
+### Frontend
+
+cd apps/frontend
+npm install
+npm run dev
+
+### Scraper
+
+cd scraper
+
+source .venv/bin/activate
+
+scrapy crawl wuxiaworld
+
+## Environment Variables
+
+### Frontend
+
+apps/frontend/.env.local
+
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+
+### Scraper
+
+scraper/.env
+
+SUPABASE_URL=
+SUPABASE_KEY=
+
+## Vision
+
+WN-Exhibition aims to become a modern web novel tracking and discovery platform with:
+- ratings
+- reviews
+- recommendation systems
+- personalized libraries
+- advanced filtering
+- multi-source aggregation
