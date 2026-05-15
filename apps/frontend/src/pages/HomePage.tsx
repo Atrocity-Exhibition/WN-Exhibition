@@ -6,7 +6,7 @@ import NovelGrid from "@/components/novels/NovelGrid"
 import { supabase } from "@/lib/supabase"
 
 export default function HomePage() {
-  const [novels, setNovels] = useState([])
+  const [novels, setNovels] = useState<any[]>([])
 
   const [loading, setLoading] = useState(true)
 
