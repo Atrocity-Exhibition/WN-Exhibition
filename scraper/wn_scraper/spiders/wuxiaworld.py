@@ -109,7 +109,9 @@ class WuxiaWorldSpider(scrapy.Spider):
                 continue
 
         if description:
-            description = html.unescape(description)
+            description = html.unescape(
+                html.unescape(description)
+            )
 
             description = (
                 description
